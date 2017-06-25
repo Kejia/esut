@@ -39,21 +39,24 @@ var nextCombination = function(n, r, a) {
 		i++;
 	}
 	return a;
-}
+};
+
+/**
+* given a is one of n-choose-n permutations, calculate its lexically next permutation.
+* @param {Array} a integer array
+* @return integer array.
+*/
+var nextPermutation = function(a) {
+	var x, i = a.length - 2;
+	while (i > -1 && a[i] > a[i + 1]) i--;
+	if (i > -1) {
+		x = a.slice(0, i + 1);
+		var y = a.slice(i + 1).sort(), j = 0;
+		while (y[j] < x[i]) j++;
+		[x[i], y[j]] = [y[j], x[i]];
+		x = x.concat(y);
+	} else x = a.slice().sort();
+	return x;
+};
 
 //module.exports = nextCombination;
-
-/*1 2 3
-1 2 4
-1 2 5
-1 3 4
-1 3 5
-1 4 5
-2 3 4
-2 3 5
-2 4 5
-3 4 5 */
-
-var a = [3, 0, 4];
-nextCombination(5, 3, a);
-
