@@ -1,0 +1,14 @@
+
+{
+	"name": "esut",
+	"version": "0.0.1",
+	"author": "kejia",
+	"license":"LGPL",
+	"scripts": {
+		"test": "mocha"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"underscore": "~1.8.3"
+	}
+}
