@@ -16,7 +16,7 @@
 
     @license The GNU Lesser General Public License, http://www.gnu.org/licenses/lgpl-3.0.txt
 
-    @author w.kejia
+    @author kejia
 
 */
 
@@ -59,4 +59,4 @@ var nextPermutation = function(a) {
 	return x;
 };
 
-//module.exports = nextCombination;
+module.exports = nextCombination;
